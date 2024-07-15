@@ -1,7 +1,7 @@
 -- 1.crear base de datos
 DROP DATABASE IF EXISTS DESASTRES;
 CREATE DATABASE DESASTRES;
-\C DESASTRES;
+\c DESASTRES;
 --
 
 -- 2. crear tabla clima futuro global
@@ -61,7 +61,7 @@ INSERT INTO muertes VALUES (2030, 1145,1456, 1345,1654,1877);
 -- 5. Crear base de datos para alojar resumenes de estadisticas
 DROP DATABASE IF EXISTS DESASTRES_BDE;
 CREATE DATABASE DESASTRES_BDE;
-\C DESASTRES_BDE;
+\c DESASTRES_BDE;
 
 CREATE TABLE DESASTRES_FINAL
 (Cuatrenio varchar(20) NOT NULL PRIMARY KEY,
@@ -75,3 +75,11 @@ T_Incendios INT NOT NULL,
 M_Jovenes_AVG FLOAT NOT NULL,
 M_Adutos_AVG FLOAT NOT NULL,
 M_Ancianos_AVG FLOAT NOT NULL);
+
+\c DESASTRES;
+SELECT *
+FROM clima;
+SELECT *
+FROM desastres;
+SELECT *
+FROM muertes;
