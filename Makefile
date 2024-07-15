@@ -7,7 +7,7 @@ PG_SERVICE_NAME=redshift-instance
 # Define the port mapping for the redshift container (default: 5432)
 PG_PORT=5432
 
-PG_PWD=ander123
+PG_PWD=carcass
 
 DOCKER_PATH=./redshift/docker-compose.yml
 DATABASE_SCRIPT=/sql-etl-process/sql-etl-process.sql
