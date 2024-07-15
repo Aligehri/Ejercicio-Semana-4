@@ -1,4 +1,4 @@
-\c DESASTRES;
+\c desastres_db;
 
 DROP PROCEDURE IF EXISTS pETL_Desastres;
 
