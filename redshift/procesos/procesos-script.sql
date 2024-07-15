@@ -1,7 +1,7 @@
 -- 1.crear base de datos
 DROP DATABASE IF EXISTS DESASTRES;
 CREATE DATABASE DESASTRES;
-\c DESASTRES;
+\c DESASTRES ;
 --
 
 -- 2. crear tabla clima futuro global
