@@ -10,7 +10,7 @@ PG_PORT=5432
 PG_PWD=carcass
 
 DOCKER_PATH=./redshift/docker-compose.yml
-DATABASE_SCRIPT=/sql-etl-process/sql-etl-process.sql
+DATABASE_SCRIPT=/procesos/procesos-script.sql
 
 .PHONY: all up psql
 
