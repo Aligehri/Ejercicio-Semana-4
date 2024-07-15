@@ -12,7 +12,7 @@ AS $$
   R_Menor15, R_15_a_30, R_30_a_45, R_45_a_60, R_M_a_60
   FROM clima
   JOIN desastres ON desastres.año = clima.año
-  JOIN muertes ON muertes.año = clima.año
+  JOIN muertes ON muertes.año = clima.año;
   
   CREATE TABLE auxiliar1 AS
   SELECT 
