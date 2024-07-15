@@ -17,7 +17,7 @@ AS $$
   CREATE TABLE auxiliar1 AS
   SELECT 
   CASE
-    WHEN 2023<= año <= 2026 THEN '2023 - 2026'
+    WHEN año >= 2023 AND año <= 2026 THEN '2023 - 2026'
     ELSE '2027 - 2030'
   END AS Cuatrienio,
   AVG(Temperatura) AS Temp_AVG,
