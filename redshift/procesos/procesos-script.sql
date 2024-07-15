@@ -1,17 +1,14 @@
 -- 1.crear base de datos
+DROP DATABASE IF EXISTS DESASTRES;
 CREATE DATABASE DESASTRES;
-GO
+\C DESASTRES;
 --
-USE DESASTRES  
-GO
-
 
 -- 2. crear tabla clima futuro global
 CREATE TABLE clima
 (año INT NOT NULL PRIMARY KEY,
 Temperatura FLOAT NOT NULL,
 Oxigeno FLOAT NOT NULL);
-GO
 
 -- Insertar valores manualmente
 INSERT INTO clima VALUES (2023, 22.5,230);
@@ -31,7 +28,7 @@ Olas_Calor INT NOT NULL,
 Terremotos INT NOT NULL,
 Erupciones INT NOT NULL,
 Incendios INT NOT NULL);
-GO
+
 -- Insertar valores manualmente
 INSERT INTO desastres VALUES (2023, 2,15, 6,7,50);
 INSERT INTO desastres VALUES (2024, 1,12, 8,9,46);
@@ -50,7 +47,7 @@ R_15_a_30 INT NOT NULL,
 R_30_a_45 INT NOT NULL,
 R_45_a_60 INT NOT NULL,
 R_M_a_60 INT NOT NULL);
-GO
+
 -- Insertar valores manualmente
 INSERT INTO muertes VALUES (2023, 1000,1300, 1200,1150,1500);
 INSERT INTO muertes VALUES (2024, 1200,1250, 1260,1678,1940);
@@ -62,11 +59,9 @@ INSERT INTO muertes VALUES (2029, 1285,1376, 1465,1432,1236);
 INSERT INTO muertes VALUES (2030, 1145,1456, 1345,1654,1877);
 
 -- 5. Crear base de datos para alojar resumenes de estadisticas
+DROP DATABASE IF EXISTS DESASTRES_BDE;
 CREATE DATABASE DESASTRES_BDE;
-GO
-
-USE DESASTRES_BDE
-GO
+\C DESASTRES_BDE;
 
 CREATE TABLE DESASTRES_FINAL
 (Cuatrenio varchar(20) NOT NULL PRIMARY KEY,
@@ -75,4 +70,3 @@ T_Tsunamis INT NOT NULL, T_OlasCalor INT NOT NULL,
 T_Terremotos INT NOT NULL, T_Erupciones INT NOT NULL, 
 T_Incendios INT NOT NULL,M_Jovenes_AVG FLOAT NOT NULL,
 M_Adutos_AVG FLOAT NOT NULL,M_Ancianos_AVG FLOAT NOT NULL);
-GO
